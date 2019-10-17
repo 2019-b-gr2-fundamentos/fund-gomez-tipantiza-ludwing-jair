@@ -27,5 +27,8 @@ let sueldo = 0;
 // edad = 30 -> phyton 
 // val edad: Integer = 30; ---> Kotlin Inmutable
 // var edad: Integer = 30; ---> Kotilin Mutable
+// ---> INMUTABLES 
+let iva = 12;
+const iva =12;
 
 
