@@ -17,3 +17,15 @@ string                   --->Arreglo de caracteres Ej:"abc" "cd"
 null                     --->VACIO Ejm:NULL
 boolen                   ----> VERDADERO O FALSO Ejmpl:tru o false 
 */
+
+//var edad = 30;//
+let edad = 30;//   Mutable --> caambiar 
+const edad = 30;// Inmutable ---> no cambiar 
+const iva = 12;
+iva=14 no reasignar valores
+let sueldo = 0;
+// edad = 30 -> phyton 
+// val edad: Integer = 30; ---> Kotlin Inmutable
+// var edad: Integer = 30; ---> Kotilin Mutable
+
+
