@@ -19,14 +19,14 @@ boolean     ---> Verdadero /Falso Ej: False o True
 */ 
 // var edad = 30; //
 let edad = 30; // Mutable -> Cambiar
-const edad = 30; // Inmutable -> No Cambiar
+// const edad = 30; // Inmutable -> No Cambiar
 const IVA = 14;
-IVA = 14; // NO REASIGNAR VALORES
+// IVA = 14; // NO REASIGNAR VALORES
 let sueldo = 0;
 // edad = 30   ---> phyton
 // var edad: Integer = 30; -> Kotlin Mutable
 // val edad: Integer = 30; -> Kotlin Inmutable
 
 //--> INMUTABLES
-let IVA = 12;
-const IVA = 12;
+// let IVA = 12;
+// const IVA = 12;
