@@ -1,6 +1,9 @@
-const edad = 30; 
-const IVA = 12;
-IVA = 14;
-let sueldo = 0;
-let IVA = 12;
-const IVA =12;
+// Variables Primitivas
+const numero = 10
+const decimal = 12.12
+const respuestaTipoNumero = typeof numero;
+console.log(respuestaTipoNumero)
+console.log(typeof decimal);
+// Gestor de Paquetes 
+// de node js ---> Descargar el "paquete"
+// npm--> yarn
