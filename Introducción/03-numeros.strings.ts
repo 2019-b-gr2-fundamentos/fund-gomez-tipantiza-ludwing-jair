@@ -20,7 +20,11 @@ resultado = 7 % 3; //1 ---> residuo
 
 console.log("pera" + 2);
 console.log("1 + 2");
-
+// STRINGS
+const mensaje = "Hola Mundo";
+const saludo = "Adios Mundo";
+console.log(mensaje + saludo);
+//Contamos los elementos
 
 
 
