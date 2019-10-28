@@ -51,6 +51,17 @@ if(casadoyMosero){
 // alarmaa y me levanto
 //celularDescargado
 //amaneceMuerto
-//estaActivadoLaAlarma
-//estaEnModoSilencio
- 
+//estaActivadoLaAlarma  != true
+//estaEnModoSilencio     == true
+//const seAtrasoAClase = celularDescargado == true
+
+//
+const seAtrasoAClase = celularDescargado ==true || celularDañado ==true ||  amaneceMuerto ==true || estaActivadaLaAlarma != true || estaEnModoSilencio ==true;
+
+if(seAtrasoAClase){
+
+}
+
+
+
+Llego tarde a clases si es que el celular esta descargado o dañado o no esta activada la alarma o esta en modo silencio o por ultimo amanezco muerto
