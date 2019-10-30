@@ -28,6 +28,7 @@ function primo(numero) {
   primo(4);
   primo(5);
   primo(6);
+  primo(7);
   primo(8);
   primo(9);
   primo(10);
