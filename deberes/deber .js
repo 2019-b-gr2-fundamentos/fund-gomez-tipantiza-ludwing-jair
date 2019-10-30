@@ -8,8 +8,7 @@ function primo(numero) {
       console.log("Modulo entre " + numero + " y " + i + " = " + (numero % i));
   
       if (numero % i === 0) {
-        console.log(i + " es un multiplo de " + numero);
-        console.log(numero + " no es un numero primo porque " + i + " es un multiplo");
+      
         return false;
       }
   
@@ -25,7 +24,16 @@ function primo(numero) {
   }
   primo(1);
   primo(2);
+  primo(3);
   primo(4);
   primo(5);
+  primo(6);
+  primo(8);
+  primo(9);
   primo(10);
+  primo(20);
+  primo(30);
+  primo(40);
+  primo(50);
+  primo(60);
   primo(2000);
