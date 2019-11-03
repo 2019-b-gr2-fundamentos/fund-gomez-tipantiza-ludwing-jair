@@ -74,11 +74,73 @@ if(seAtrasoAClase){}
 
 //TRUTY
 const nombreVacio = "";
-if(){
+if(""){
     console.log("Truty");
 }else{
     console.log("Falsy");
 }
+
+const nombreVacio = "abc";
+if("abc"){
+    console.log("Truty");
+}else{
+    console.log("Falsy");
+}
+
+
+if("-1"){
+    console.log("Truty");
+}else{
+    console.log("Falsy");
+}
+
+
+if("1.2"){
+    console.log("Truty");
+}else{
+    console.log("Falsy");
+}
+
+
+if(0){
+    console.log("Truty");
+}else{
+    console.log("Falsy"); 
+} // falsy
+
+if(null){
+    console.log("Truty");
+}else{
+    console.log("Falsy");
+} // falsy
+
+if(undefined){
+    console.log("Truty");
+}else{
+    console.log("Falsy");
+} // falsy
+
+
+const calculo = "sumar"
+switch(calculo){
+
+    case "sumar":   
+        //Codigo
+        break;
+    case "restar":   
+        //Codigo  
+        break;
+    case "multiplicar": 
+        //Codigo 
+        break;
+    case  "dividir" :
+        //Codigo 
+        break;
+    default:
+}
+
+
+
 
 
 const edadString = prompt ("Ingresar numero")
