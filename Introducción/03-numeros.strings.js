@@ -55,4 +55,4 @@ console.log(nombreLongitud.substring(0, 6));
 // numerouno
 // numero_uno  -> PYTHON
 // numerOunO
-// CONSULTAR CUAL DE ESTOS TIPOS SE UTILIZA 
+// CONSULTAR CUAL DE ESTOS TIPOS SE UTILIZA

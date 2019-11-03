@@ -6,7 +6,7 @@ if (casado == true){
     console.log("No estoy casado");
 } 
 
-if (casado == false){  // Expresión--> boolean
+if (casado == false){  // Expresión devuelve--> boolean
     console.log("No estoy casado");
 } else {
     console.log("Si estoy casado");
@@ -19,15 +19,21 @@ if (casado != true){
 } 
 
 if (casado != false){  
-    console.log("No estoy casado");
-} else {
     console.log("Si estoy casado");
+} else {
+    console.log("No estoy casado");
 } 
 
-const tengoMosa = false
+const tengoMosa = false;
+
+if (casado == true && tengoMosa == True ){  
+    console.log("Casado y Mosero");
+} else {
+    console.log("O casado o Mosero o Nada ");
+} 
 const estaCasado = casado == true;
 const soyMosero = tengoMosa == true;
-cosnt casadoyMosero = estaCasado && soyMosero;
+const casadoyMosero = casado == true && tengoMosa = true;
 if(casadoyMosero){
     console.log("Casado y mosero");
 } else {
@@ -58,10 +64,46 @@ if(casadoyMosero){
 //
 const seAtrasoAClase = celularDescargado ==true || celularDañado ==true ||  amaneceMuerto ==true || estaActivadaLaAlarma != true || estaEnModoSilencio ==true;
 
-if(seAtrasoAClase){
+if(seAtrasoAClase){}
 
+
+
+//Llego tarde a clases si es que el celular esta descargado o dañado o no esta activada la alarma o esta en modo silencio o por ultimo amanezco muerto
+
+//----------------------------------------------------------------------------------------
+
+//TRUTY
+const nombreVacio = "";
+if(){
+    console.log("Truty");
+}else{
+    console.log("Falsy");
 }
 
 
+const edadString = prompt ("Ingresar numero")
+const edad = Number (edadString); // sumar restar multiplicar dividir 
+switch(edad){
 
-Llego tarde a clases si es que el celular esta descargado o dañado o no esta activada la alarma o esta en modo silencio o por ultimo amanezco muerto
+
+
+// switch sirve para caso especificos 
+
+
+
+
+
+                    
+const edadString =  prompt ( " Ingrese su edad " )
+const edad = Number( edadString );
+if ( edad  >= 0  &&  edad <= 6) {
+console.log ( " Usted es un guagua " );
+} else  if ( edad  > 6  &&  edad <= 18 ) {
+console.log( " Usted es un guambra " );
+} else  if ( edad > 18  &&  edad <= 65 ) {
+console.log (  "Usted es un Longo " );
+} else  if ( edad > 65  &&  edad <= 100 ) {
+console.log ( " Usted es un Ruku " );}
+else{
+    console.log("Usted aun no nace");
+}    
