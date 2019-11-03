@@ -33,6 +33,7 @@ console.log(saludoEdad);
 const nombreLongitud = "Ludwing Jair";
 console.log(nombreLongitud.length);
 // traer una expresion regular DEBER
+
 // Eliminaar espacios al principio y al final
 console.log(nombreLongitud.trim());
 // cambiar mayusculas
