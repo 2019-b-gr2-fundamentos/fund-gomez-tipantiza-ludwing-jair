@@ -36,7 +36,8 @@ console.log(nombreLongitud.length);
 /*Expresiones regulares mediante una cadena literal para encontrar un patrón 
 para ello se usa el constructor de objeto RegExp
  Para crear un literal RegExp se utiliza esta expresión var re = /regular expression/ */
-var re =/abc/;
+ //[^patron]	Encuentra cualquier carácter que no esté en este conjunto /[^eo]s/ Es. es el ess. e os oss. esss. eos oes uuus.
+
 
 // Eliminaar espacios al principio y al final
 console.log(nombreLongitud.trim());
