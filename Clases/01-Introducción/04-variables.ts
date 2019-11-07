@@ -169,3 +169,4 @@ console.log ( " Usted es un Ruku " );}
 else{
     console.log("Usted aun no nace");
 }    
+

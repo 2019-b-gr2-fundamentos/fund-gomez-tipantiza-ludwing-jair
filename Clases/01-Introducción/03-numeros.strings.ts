@@ -1,4 +1,4 @@
-const numeroUno = 1; //camelCase(todas minisculas)
+const numerouno = 1; //camelCase(todas minisculas)
 const numeroDos = 2; //camelCase
 const numeroSiete = 7;
 const numeroCuatro = 4;
@@ -33,6 +33,11 @@ console.log(saludoEdad);
 const nombreLongitud = "Ludwing Jair";
 console.log(nombreLongitud.length);
 // traer una expresion regular DEBER
+/*Expresiones regulares mediante una cadena literal para encontrar un patrón 
+para ello se usa el constructor de objeto RegExp
+ Para crear un literal RegExp se utiliza esta expresión var re = /regular expression/ */
+ //[^patron]	Encuentra cualquier carácter que no esté en este conjunto /[^eo]s/ Es. es el ess. e os oss. esss. eos oes uuus.
+
 
 // Eliminaar espacios al principio y al final
 console.log(nombreLongitud.trim());

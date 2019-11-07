@@ -2,7 +2,6 @@
 Nombre: Jair Gómez
 Fecha actualización: 17-10-2019
 Descripción: Ejemplos de Variables Primitivas en JS
-/*
 // Comentario
 /* <- abro bloque comentario
 ->cierro bloque comentario*/

@@ -1,4 +1,4 @@
-var numeroUno = 1; //camelCase(todas minisculas)
+var numerouno = 1; //camelCase(todas minisculas)
 var numeroDos = 2; //camelCase
 var numeroSiete = 7;
 var numeroCuatro = 4;
@@ -32,6 +32,10 @@ console.log(saludoEdad);
 var nombreLongitud = "Ludwing Jair";
 console.log(nombreLongitud.length);
 // traer una expresion regular DEBER
+/*Expresiones regulares mediante una cadena literal para encontrar un patrón
+para ello se usa el constructor de objeto RegExp
+ Para crear un literal RegExp se utiliza esta expresión var re = /regular expression/ */
+var re = /abc/;
 // Eliminaar espacios al principio y al final
 console.log(nombreLongitud.trim());
 // cambiar mayusculas
