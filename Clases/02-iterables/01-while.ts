@@ -1,111 +1,100 @@
 
+// DO WHILE
 let vecesQueHeComido = 0;
-do{    
-    console.log('vamos a comer');
-    vecesQueHeComido = vecesQueHeComido + 1
-    switch (vecesQueHeComido) {
-        case 1: 
-          console.log('desayuno');
+do{
+    console.log('Vamos a comer');
+    vecesQueHeComido = vecesQueHeComido + 1;
+    switch(vecesQueHeComido){
+        case 1:
+            console.log("DESAYUNO");
             break;
         case 2:
-            console.log('almuerzo');
-              break;
+            console.log("ALMUERZO");
+            break;
         case 3:
-            console.log('merienda');
-             break;   
+            console.log("MERIENDA");
+            break;
         default:
-          console.log('gorditos');
-          break
-      }
-} while (vecesQueHeComido < 3 ){
+            console.log("GORDITOS");
+    }
 
+} while(vecesQueHeComido < 3)
 
+while(vecesQueHeComido < 3){
 
-  vecesQueHeComido = 0
-    switch (vecesQueHeComido) {
-        case 1: 
-          console.log('desayuno');
+    console.log('Vamos a comer');
+    vecesQueHeComido = 0;
+    vecesQueHeComido = vecesQueHeComido + 1;
+    switch(vecesQueHeComido){
+        case 1:
+            console.log("DESAYUNO");
             break;
         case 2:
-            console.log('almuerzo');
-              break;
+            console.log("ALMUERZO");
+            break;
         case 3:
-            console.log('merienda');
-             break;   
+            console.log("MERIENDA");
+            break;
         default:
-          console.log('gorditos');
-          break
-      }
+            console.log("GORDITOS");
+}
 }
 
-
-
-
 /*
-1 analisis
-2 algebra
+1 Analisis socioeconomico
+2 Algebra lineal
 3 compiladores
-5 program
-7  calculo
-11 fisica
-13 ingles
-Si es impar ---> aumentsamos a analisis socioeconomic
-si es par ----> aumentamos algebra
-si es muñtiplo de 3 ----> aumentamos a compiladores 
-1 Analisis  
-2 Algebra
-3 Compiladores
 5 programacion
 7 calculo
 11 fisica
-13 ingles
-Si es inpar aumentar a analisis socioeconomico
-si es par aumentamos a algebra
-si es multiplo de 3 aumentamos a compiladores
+13 ingles 
 */
 
-let numero = 1;
-let Analisis = 0; 
-let Algebra = 0;
-let Compiladores = 0;
+
+/*
+Pseudocodigo
+Si el numero es impar, aumentamos a Analisis socioeconomico
+Si el numero es par, aumentamos a Algebra
+Si es multiplo de tres, aumentamos a compiladores
+si es multiplo de 5,aumentamos a program
+*/
+
+
+
+let numeroDeDeberes = 0;
+let analisis = 0;
+let algebra = 0;
+let compiladores = 0;
 let programacion = 0;
 let calculo = 0;
 let fisica = 0;
 let ingles = 0;
-
-
 do{
-  numero = numero + 1
-      if ((numero%13) == 0){
-          ingles = ingles + 1   
-}else{
-      if((numero%11) == 0){
-        fisica = fisica + 1
-  }else{
-       if(numero%7 == 0){
-          calculo = calculo + 1
-    }else{
-        if(numero%5 == 0){
-        programacion = programacion + 1
-      }else{
-        if(numero%3 == 0){
-          Algebra = Algebra + 1
-        }else{
-        if(numero%1 == 0){
-            Analisis = Analisis + 1
-          }
-        }
-      }
+numeroDeDeberes = numeroDeDeberes + 1;
+    if(numeroDeDeberes % 13 == 0){
+        ingles = ingles + 1; /*Tomamos el inglés como prioridad
+        pues si ponemos como prioridad los pares e impares no nos abarcaria los deberes de ingles y
+        fuera 500 para aanalisis y 500 para algebra*/ 
+    }else if(numeroDeDeberes % 11 == 0){
+        fisica = fisica + 1;
+    }else if(numeroDeDeberes % 7 == 0){
+        calculo = calculo + 1;
+    }else if(numeroDeDeberes % 5 == 0){
+        programacion = programacion + 1;
+    }else if(numeroDeDeberes % 3 == 0){
+        compiladores = compiladores + 1;
+    }else if(numeroDeDeberes % 2 == 0){
+        algebra = algebra + 1;
+    }else if(numeroDeDeberes % 2 !== 0){
+        analisis = analisis + 1;
     }
-  }
-}
+    }
+    while(numeroDeDeberes < 1000);
 
-} while (numero <= 1000);
-
-console.log(`la cantida de deberes de ingles fue ${fisica}`);
-
-
-
-
-
-
+console.log(`Hice ${ingles} deberes de Inglés`);
+console.log(`Hice ${fisica} deberes de Física`);
+console.log(`Hice ${calculo} deberes de Cálculo`);
+console.log(`Hice ${programacion} deberes de Programacion`);
+console.log(`Hice ${compiladores} deberes de Compiladores`);
+console.log(`Hice ${algebra} deberes de Algebra Lineal`);
+console.log(`Hice ${analisis} deberes de Análisis Socioeconómico`);
