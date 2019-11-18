@@ -42,7 +42,15 @@ arregloNumeros[4];
 //[1,2,3,4,5,]
 // 0 1 2 3 4 
 //indice
-console.log(arregloNumeros[4]);
+//console.log(arregloNumeros[4]);
+console.log(arregloNumeros[indiceElementoCinco]);
+// Crear arreglo de 5 elementos
+// Cada 2 elemento 1 0 un 0
+// Ejmp[0,0,1,1,0]
+// Exista al menos un elemento 1
+//ej[0,0,0,1] valido
+Math.floor(Math.random() * 2);
+//
 // Arreglo 
 // 1) Elementos
 // 2) Indices(0 index based) --> Posicion
