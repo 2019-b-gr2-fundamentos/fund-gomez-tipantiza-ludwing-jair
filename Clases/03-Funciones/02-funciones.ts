@@ -68,3 +68,5 @@ function dividir (numUno:number,numDos:number):number{
 /* Funciones recursiva se llamabaan asi mismo 
 y tiene que acabar en un punto y es cuando cumple la condicion
 */
+
+
