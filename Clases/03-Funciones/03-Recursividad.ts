@@ -10,19 +10,83 @@ function imprimirMensajeNVeces(
         imprimirMensajeNVeces(mensaje, nuevoNumeroVeces);
     }
 }
- 
+
 function main(){
-    imprimirMensajeNVeces('hola',3);
+    imprimirMensajeNVeces(':3', 12);
 }
- 
+
 main();
+// EJEMPLOS
+const arregloNumeros: number[] = [1, 2, 3];
+const arregloString: string[] = ['a', 'b', 'c'];
+const arregloBoolean: boolean[] = [true, false, false];
+// EJEMPLO 
+function imprimir(arreglo: number[]){
 
-const arreglo =[1,2,3,4,5,6,7]
-function detenerElArreglo(){
-    
+}
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const arregloDos =[1,2,3,4,5,6,7,8]
+//Multiplicar el 0* n elemento + multiplicar el 0 +1 *n-1 elemento + multiplicar 0 + 2* n-2 elemento +
+const arregloDosDosDimensiones = 
+[
+    [1,2,3,4],
+    [5,6,7,8]
+];
+arregloDosDosDimensiones[0][0]//1
+arregloDosDosDimensiones[0][1]//2
+arregloDosDosDimensiones[1][0]//3
+arregloDosDosDimensiones[1][1]//4
+
+function productoCruz(vectores : number[][]):number[]{
+    return[0,0,(1*4)-(2*3)]
+
+}
+
+
+// definir el tamaño
+// repetir calculo n veces (n=tamaño)
+/*
+3.1)1er elemento 1er arreglo 
+3.2)ultimo elmento del 2do arreglo
+3.3)sumar los elementos 
+3.4)1er elemento + 1=2do elemento 
+3.5)ultimo elementon -1 = penultimo del 2do arreglo
+3.6) sumar los elementos 
+))*/
+
+ejercicioMatriz();
+function ejercicioMatriz():void{
+    let producto=0;
+    let resultado=0;
+    const matrizDos=[
+
+        [1,2,3,4,9],
+        [5,6,7,8,10]
+        
+    ];
+    let indice=matrizDos[0].length;
+    for(let contador=0;contador<matrizDos[0].length;contador++){
+        indice--;
+        producto=matrizDos[0][contador]*matrizDos[1][indice];
+        resultado=resultado+producto;
+    }
+    console.log(resultado);
 }
