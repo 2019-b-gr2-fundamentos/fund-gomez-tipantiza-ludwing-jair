@@ -22,4 +22,4 @@ const numeroUno = Number(numeroUnostring);
 const numeroDos = Number(numeroDosString);
 console.log(numeroUno / numeroDos);
 
-
+// Divide y retorna resultado entero -> ~/

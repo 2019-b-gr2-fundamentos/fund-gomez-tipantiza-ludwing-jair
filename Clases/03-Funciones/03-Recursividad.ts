@@ -1,7 +1,5 @@
-function imprimirMensajeNVeces(
-    mensaje: string,
-    numeroVeces: number
-): void{
+function imprimirMensajeNVeces( mensaje: string, numeroVeces: number )
+:void{ // el void nos dice que la funcion no devuelve nada 
     if(numeroVeces == 0){
         console.log('Se termino');
     }else{
@@ -9,22 +7,36 @@ function imprimirMensajeNVeces(
         const nuevoNumeroVeces = numeroVeces - 1;
         imprimirMensajeNVeces(mensaje, nuevoNumeroVeces);
     }
+
 }
 
+//function main(){
+//   imprimirMensajeNVeces('hola', 3);
+//}
+
+
+
+const arreglo1 = [1,2,3,4,5];
+console.log(arreglo1);
+function recorrerUnArreglo(arreglo1: number[], indiceDeElementos:number): void{
+    if(indiceDeElementos <= 4){
+        console.log(arreglo1[indiceDeElementos]);
+        const indiceDeElementosNuevo = indiceDeElementos + 1;
+        recorrerUnArreglo(arreglo1, indiceDeElementosNuevo);
+    }else{
+        console.log('Se han impreso todos los elementos');
+    }
+        
+}
 function main(){
-    imprimirMensajeNVeces(':3', 12);
+    recorrerUnArreglo(arreglo1, 0);
 }
 
-main();
-// EJEMPLOS
-const arregloNumeros: number[] = [1, 2, 3];
-const arregloString: string[] = ['a', 'b', 'c'];
-const arregloBoolean: boolean[] = [true, false, false];
-// EJEMPLO 
-function imprimir(arreglo: number[]){
-
-}
-
+/*
+1) cuantos elementos tiene el arreglo
+2) imprimir el arreglo
+3) seleccionar el primer elemento
+*/
 
 
 
@@ -72,21 +84,4 @@ function productoCruz(vectores : number[][]):number[]{
 3.6) sumar los elementos 
 ))*/
 
-ejercicioMatriz();
-function ejercicioMatriz():void{
-    let producto=0;
-    let resultado=0;
-    const matrizDos=[
 
-        [1,2,3,4,9],
-        [5,6,7,8,10]
-        
-    ];
-    let indice=matrizDos[0].length;
-    for(let contador=0;contador<matrizDos[0].length;contador++){
-        indice--;
-        producto=matrizDos[0][contador]*matrizDos[1][indice];
-        resultado=resultado+producto;
-    }
-    console.log(resultado);
-}
