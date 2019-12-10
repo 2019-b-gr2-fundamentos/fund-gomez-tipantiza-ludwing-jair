@@ -73,12 +73,7 @@ if(seAtrasoAClase){}
 //----------------------------------------------------------------------------------------
 
 //TRUTY
-const nombreVacio = "";
-if(""){
-    console.log("Truty");
-}else{
-    console.log("Falsy");
-}
+
 
 const nombreVacio = "abc";
 if("abc"){
@@ -119,6 +114,12 @@ if(undefined){
 }else{
     console.log("Falsy");
 } // falsy
+const nombreVacio = " ";
+if(""){
+    console.log("Truty");
+}else{
+    console.log("Falsy");
+}//Falsy
 
 
 const calculo = "sumar"

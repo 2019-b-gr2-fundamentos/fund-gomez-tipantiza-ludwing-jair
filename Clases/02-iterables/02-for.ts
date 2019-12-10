@@ -33,7 +33,7 @@ const arregloNumeros = [1,2,3,4,5];
 // Si existe una funcion elinmutable puede cambiar
 //lET REASIGNAR
 arregloNumeros.push(6);
-console.log('arreglo Numeros', arregloNumeros);
+console.log('arreglo Numeros',arregloNumeros);
 
 arregloNumeros.pop();
 console.log('arreglo de Numeros',arregloNumeros);

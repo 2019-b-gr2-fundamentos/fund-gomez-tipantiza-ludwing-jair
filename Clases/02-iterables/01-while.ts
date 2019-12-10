@@ -60,9 +60,6 @@ Si el numero es par, aumentamos a Algebra
 Si es multiplo de tres, aumentamos a compiladores
 si es multiplo de 5,aumentamos a program
 */
-
-
-
 let numeroDeDeberes = 0;
 let analisis = 0;
 let algebra = 0;
