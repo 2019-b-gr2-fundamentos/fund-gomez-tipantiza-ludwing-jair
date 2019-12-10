@@ -25,6 +25,7 @@ const mensaje = "Hola Mundo";
 const saludo = '"\"Adios Mundo"\"';
 console.log(mensaje + " " + saludo);
 const saludoCompleto = `${mensaje}\n${saludo}`;
+console.log(saludoCompleto)
 //Contamos los elementos
 // template strings
 const edad = 30;

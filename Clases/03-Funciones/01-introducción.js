@@ -5,29 +5,18 @@
 // Aveces tienen salidas aveces no
 // es como un contrato
 //phyton php javascript es un lenguaje no tipado
-
-
-function log(
-   cualquierCosa // Parametro
-    ){
+function log(cualquierCosa // Parametro
+    ) {
     console.log(cualquierCosa);
 }
-log("ASXVCBVNBGMN,HJ");
-
-function noHayElTexto(){
+log("Hola Mundo");
+function noHayElTexto() {
     console.log('No hay el texto');
 }
 noHayElTexto();
-
-
-
-function sumaarDosNumeros (
-    a:number,
-    b:number 
-    ): number
-    {
+function sumaarDosNumeros(a, b) {
     return a + b;
-    
 }
-sumaarDosNumeros(4,2);
-
+sumaarDosNumeros(4, 2);
+var resultadosT = sumaarDosNumeros;
+console.log(resultadosT);

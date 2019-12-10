@@ -1,19 +1,15 @@
-#include<iostream>
-#include<conio.h>
-
-using namespace std;
-int main (){
-int numeroDeDeberes = 0;
-int algebra = 0;
-int compiladores = 0;
-int programacion = 0;
-int calculo = 0;
-int fisica = 0;
-int ingles = 0;
+let numeroDeDeberes = 0;
+let analisis = 0;
+let algebra = 0;
+let compiladores = 0;
+let programacion = 0;
+let calculo = 0;
+let fisica = 0;
+let ingles = 0;
 do{
 numeroDeDeberes = numeroDeDeberes + 1;
     if(numeroDeDeberes % 13 == 0){
-        ingles = ingles + 1; /*Tomamos el inglés como prioridad
+        ingles = ingles + 1; /*Tomamos el inglÃ©s como prioridad
         pues si ponemos como prioridad los pares e impares no nos abarcaria los deberes de ingles y
         fuera 500 para aanalisis y 500 para algebra*/ 
     }else if(numeroDeDeberes % 11 == 0){
@@ -32,11 +28,10 @@ numeroDeDeberes = numeroDeDeberes + 1;
     }
     while(numeroDeDeberes < 1000);
 
-print(`Hice ${ingles} deberes de Inglés`);
-print(`Hice ${fisica} deberes de Física`);
-print(`Hice ${calculo} deberes de Cálculo`);
-print(`Hice ${programacion} deberes de Programacion`);
-print(`Hice ${compiladores} deberes de Compiladores`);
-print(`Hice ${algebra} deberes de Algebra Lineal`);
-print(`Hice ${analisis} deberes de Análisis Socioeconómico`);
-}
+console.log(`Hice ${ingles} deberes de InglÃ©s`);
+console.log(`Hice ${fisica} deberes de FÃ­sica`);
+console.log(`Hice ${calculo} deberes de CÃ¡lculo`);
+console.log(`Hice ${programacion} deberes de Programacion`);
+console.log(`Hice ${compiladores} deberes de Compiladores`);
+console.log(`Hice ${algebra} deberes de Algebra Lineal`);
+console.log(`Hice ${analisis} deberes de AnÃ¡lisis SocioeconÃ³mico`);
