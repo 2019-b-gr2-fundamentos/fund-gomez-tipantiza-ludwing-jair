@@ -18,18 +18,18 @@ function imprimirMensajeNVeces( mensaje: string, numeroVeces: number )
 
 const arreglo1 = [1,2,3,4,5];
 console.log(arreglo1);
-function recorrerUnArreglo(arreglo1: number[], indiceDeElementos:number): void{
-    if(indiceDeElementos <= 4){
-        console.log(arreglo1[indiceDeElementos]);
+function recorrerUnArreglo(arreglo1:number[],indiceDeElementos:number): void{
+    if(indiceDeElementos <=4)
         const indiceDeElementosNuevo = indiceDeElementos + 1;
         recorrerUnArreglo(arreglo1, indiceDeElementosNuevo);
     }else{
-        console.log('Se han impreso todos los elementos');
+     main();
     }
         
 }
 function main(){
     recorrerUnArreglo(arreglo1, 0);
+
 }
 
 /*
@@ -83,5 +83,3 @@ function productoCruz(vectores : number[][]):number[]{
 3.5)ultimo elementon -1 = penultimo del 2do arreglo
 3.6) sumar los elementos 
 ))*/
-
-
