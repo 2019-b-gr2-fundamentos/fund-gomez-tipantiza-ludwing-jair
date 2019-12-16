@@ -9,7 +9,7 @@ function log(cualquierCosa // Parametro
     ) {
     console.log(cualquierCosa);
 }
-log("Hola Mundo");
+log("ASXVCBVNBGMN,HJ");
 function noHayElTexto() {
     console.log('No hay el texto');
 }
@@ -18,5 +18,4 @@ function sumaarDosNumeros(a, b) {
     return a + b;
 }
 sumaarDosNumeros(4, 2);
-var resultadosT = sumaarDosNumeros;
-console.log(resultadosT);
+console.log(sumaarDosNumeros);
