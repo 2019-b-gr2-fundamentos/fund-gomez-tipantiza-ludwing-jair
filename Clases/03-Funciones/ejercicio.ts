@@ -34,14 +34,13 @@ function obtenerSegundaDivision(matrizUno:Number[][]):number|false{
         if(longitudActualMaxima<longitudActual){
             longitudActualMaxima=longitudActual;
         }
-        if(longitudActual<longitudActualMinima &&longitudActualMinima >=0){
-            longitudActualMinima=longitudActual;
-        }else{
+        if(longitudActualMinima == -1){
             longitudActualMinima=longitudActual;
         }
+        if(longitudActual<longitudActualMinima &&longitudActualMinima >=0){
+            longitudActualMinima=longitudActual;
+        }}
 
-
-    }
     return false;
 }
 function dimensionesiguales(){
