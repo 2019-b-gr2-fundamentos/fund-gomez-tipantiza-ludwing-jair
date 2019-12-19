@@ -11,7 +11,7 @@ arregloNumeros1.push(11)
 // Borrar al final
 arregloNumeros1.pop();
 
-//Añadir 
+//Añadir en posicion en donde quiero  
 //Necesito el indice donde quiere añadir y el elemento a añadir 
 
 arregloNumeros1.splice(1,0,1.1)
@@ -42,4 +42,6 @@ se requiere saber la posicion(índice) en la que se requiere implementarlo,
  console.log(arregloNumeros1.indexOf(7));
  console.log(arregloNumeros1.indexOf(9));
 
+ arregloNumeros1 [0]=999; // Remplazar el elemento de la posicion por otro que quiero
+ console.log(arregloNumeros1)
  

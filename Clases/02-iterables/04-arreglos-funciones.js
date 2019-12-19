@@ -8,7 +8,7 @@ console.log(arregloNumeros1[6]); //7
 arregloNumeros1.push(11);
 // Borrar al final
 arregloNumeros1.pop();
-//Añadir 
+//Añadir en posicion en donde quiero  
 //Necesito el indice donde quiere añadir y el elemento a añadir 
 arregloNumeros1.splice(1, 0, 1.1);
 console.log(arregloNumeros1);
@@ -30,3 +30,5 @@ arregloNumeros1.indexOf(9);
 console.log(arregloNumeros1.indexOf(5));
 console.log(arregloNumeros1.indexOf(7));
 console.log(arregloNumeros1.indexOf(9));
+arregloNumeros1[0] = 999;
+console.log(arregloNumeros1);

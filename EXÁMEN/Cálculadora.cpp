@@ -12,10 +12,12 @@ double Sumar(double,double);
 double Restar(double,double);
 double Multiplicar(double,double);
 double Dividir(double,double);
+int calculadora();
 
 
-int main()
-{
+int main(){calculadora();
+}
+int calculadora(){
     cout << " Calculadora Jair" << endl;
     cout << "\n" << endl;
     int operador;
@@ -82,15 +84,14 @@ int main()
 		 cin >>cateto2;
 	 	 hipotenusa=sqrt((cateto1*cateto1)+(cateto2*cateto2));
 	 	 cout <<"\nLa hipotenusa es: "<<hipotenusa<<endl;
-	 }else{
-	 	double val1,val2;
-    cout << "Introduce el primer valor: ";
-    cin >> val1;
-    cout << "Introduce el segundo valor: ";
-    cin >> val2;
-    cout << "\n" << endl;
-   
-    switch(operador)
+	 }else if(operador==1||operador==2||operador==3||operador==4){
+	 double val1,val2;
+	 cout << "Introduce el primer valor: ";
+	 cin >> val1;
+	 cout << "Introduce el segundo valor: ";
+	 cin >> val2;
+	 cout << "\n" << endl;
+	 switch(operador)
     {
         case 1:
             cout << "\n";
@@ -112,11 +113,14 @@ int main()
             cout << "la Division es " << Dividir(val1,val2) << endl;
             cout << "\n";
         break;
-    }
+    }}else{ calculadora();
+	}
+	cout<<"\n---------------------------------------------------------------------------------------------------------\n";
+	calculadora();
     
     system("pause");
     getch();
-}}
+}
 double Sumar(double x,double y)
 {return x + y;}
 

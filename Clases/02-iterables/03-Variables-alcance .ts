@@ -16,6 +16,7 @@ if(true){ // Bloque 1
     console.log(edad); // undefined
     console.log("7 años de carcel");
 }
+
 if(true){
     let bandera = 0;
     for(let i=0; i<10; i++){

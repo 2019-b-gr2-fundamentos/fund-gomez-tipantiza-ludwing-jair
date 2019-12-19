@@ -21,13 +21,10 @@ noHayElTexto();
 
 
 
-function sumaarDosNumeros (
-    a:number,
-    b:number 
-    ): number
+function sumaarDosNumeros(a:number,b:number  ):number
     {
-    return a + b;
-    
+    return a + b;  
 }
 sumaarDosNumeros(4,2);
+console.log(sumaarDosNumeros);
 
