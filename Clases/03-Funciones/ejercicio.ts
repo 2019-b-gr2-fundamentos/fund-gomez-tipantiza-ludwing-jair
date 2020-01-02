@@ -37,10 +37,12 @@
         console.log(matrizUnoSegundaDimension);
         console.log(matrizDosPrimeraDimension);
         console.log(matrizDosSegundaDimension);
+        
         if(matrizUnoPrimeraDimension !=false&&
             matrizUnoSegundaDimension !=false&&
             matrizDosPrimeraDimension !=false &&
             matrizDosSegundaDimension != false ){
+            if(matrizUnoPrimeraDimension== matrizDosPrimeraDimension && matrizUnoSegundaDimension== matrizDosSegundaDimension)
                 return true;
             }else{
                 return false;}
