@@ -21,7 +21,15 @@ function compararMatriz(matrizUno, matrizDos) {
     console.log(matrizUnoSegundaDimension);
     console.log(matrizDosPrimeraDimension);
     console.log(matrizDosSegundaDimension);
-    return true;
+    if (matrizUnoPrimeraDimension != false &&
+        matrizUnoSegundaDimension != false &&
+        matrizDosPrimeraDimension != false &&
+        matrizDosSegundaDimension != false) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 function obtenerPrimeraDimension(matrizUno) {
     // VALIDACIONES
@@ -78,8 +86,8 @@ function verificarTodosLosElementosDeUnArregloSonArreglo(arreglo) {
 }
 function main() {
     var x = [
-        [1, 2],
-        [3]
+        [1, 2, 3],
+        [3, 4, 5]
     ];
     var y = [
         [1, 2],

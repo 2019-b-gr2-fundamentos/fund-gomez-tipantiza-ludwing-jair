@@ -37,8 +37,14 @@
         console.log(matrizUnoSegundaDimension);
         console.log(matrizDosPrimeraDimension);
         console.log(matrizDosSegundaDimension);
+        if(matrizUnoPrimeraDimension !=false&&
+            matrizUnoSegundaDimension !=false&&
+            matrizDosPrimeraDimension !=false &&
+            matrizDosSegundaDimension != false ){
+                return true;
+            }else{
+                return false;}
         
-     return true;
     }
     
     function obtenerPrimeraDimension(matrizUno: number[][]): number | boolean{
@@ -98,8 +104,8 @@
     
     function main(){
         const x = [
-            [1,2],
-            [3]
+            [1,2,3],
+            [3,4,5]
         ];
         const y = [
             [1,2],
