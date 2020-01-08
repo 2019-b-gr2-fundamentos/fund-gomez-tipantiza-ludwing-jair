@@ -1,0 +1,16 @@
+{
+    "nombre":"Jair",
+    "Apellido":"Gomez",
+    "edad": 30,
+    "Casado":false,
+    "Hijos":null,
+    "mascotas":["Lilo","Osito","Chino"],
+    "prima":{
+        "nombre":"Kevin",
+        "Apellido":"Solis",
+        "edad": 16,
+        "Casado":false,
+        "Hijos":null,
+        "mascotas":[]
+    }
+}

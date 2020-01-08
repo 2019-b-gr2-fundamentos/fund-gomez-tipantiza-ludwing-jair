@@ -1,0 +1,16 @@
+{
+  "name": "05-proyecto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "libraryfundamentos": "^1.0.0",
+    "libreria": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "empezar": "(tsc index.ts||node) && node index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
