@@ -7,26 +7,16 @@
     //|en la funcion es un "0"
     
     
-    const arregloMatriz = [
-        [1,2],
-        [3,4,5],
-        [6,7,8,6],
-        [9],
-        [],
-    ];
+
     
-    
-    
-    function compararMatriz(matrizUno: number[][],
-        matrizDos: number[][]):boolean {
+    function compararMatriz(matrizUno:number[][],matrizDos: number[][]):boolean {
             const esValido=tienenMatricesIgualesDimensiones(matrizUno,matrizDos);
             if(esValido){
                 return tienenMismoValores(matrizUno,matrizDos);
             }else{
                 return false;}
     }
-    function tienenMismoValores(matrizUno: number[][],
-        matrizDos: number[][]):boolean{
+    function tienenMismoValores(matrizUno: number[][],matrizDos: number[][]):boolean{
             const primeraDimension =matrizUno.length
             const segundaDimension=matrizUno[0].length
             let banderaSonIguales=true;
@@ -65,7 +55,8 @@
                 matrizUnoSegundaDimension !=false&&
                 matrizDosPrimeraDimension !=false &&
                 matrizDosSegundaDimension != false ){
-                if(matrizUnoPrimeraDimension== matrizDosPrimeraDimension && matrizUnoSegundaDimension== matrizDosSegundaDimension)
+                if(matrizUnoPrimeraDimension== matrizDosPrimeraDimension 
+                    && matrizUnoSegundaDimension== matrizDosSegundaDimension)
                     return true;
                 }else{
                     return false;}
@@ -97,10 +88,10 @@
                 if(longitudActualMinima == -1) {
                     longitudActualMinima = longitudActual;
                 }else{
-                    if(longitudActual < longitudActualMinima){
-                        longitudActualMinima = longitudActual;
-                    }
+                    if(longitudActual <longitudActualMinima){
+                    longitudActualMinima = longitudActual;
                 }
+            }
             }
             if(longitudActualMaxima != longitudActualMinima){
                 return false;
@@ -112,13 +103,10 @@
         }
     }
     
-    function verificarTodosLosElementosDeUnArregloSonArreglo(
-        arreglo: any[]
-    ):boolean{
+    function verificarTodosLosElementosDeUnArregloSonArreglo(arreglo: any[]):boolean{
         for(let i = 0; i < arreglo.length; i++){
             const elementoActual = arreglo[i];
-            const esUnArreglo = typeof elementoActual == 'object' &&
-            elementoActual.indexOf; // Truty
+            const esUnArreglo = typeof elementoActual == 'object' && elementoActual.indexOf; // Truty
             if(!esUnArreglo){
                 return false;
             }
@@ -133,7 +121,7 @@
             [3,4,4]
         ];
         const y = [
-            [1,2],
+            [1,2,3],
             [3,4,4],
         ];
        const resultado = compararMatriz(x, y);

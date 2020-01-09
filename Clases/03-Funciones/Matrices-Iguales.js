@@ -49,7 +49,8 @@ function tienenMatricesIgualesDimensiones(matrizUno, matrizDos) {
         matrizUnoSegundaDimension != false &&
         matrizDosPrimeraDimension != false &&
         matrizDosSegundaDimension != false) {
-        if (matrizUnoPrimeraDimension == matrizDosPrimeraDimension && matrizUnoSegundaDimension == matrizDosSegundaDimension)
+        if (matrizUnoPrimeraDimension == matrizDosPrimeraDimension
+            && matrizUnoSegundaDimension == matrizDosSegundaDimension)
             return true;
     }
     else {
@@ -82,11 +83,6 @@ function obtenerSegundaDimension(matrizUno) {
             if (longitudActualMinima == -1) {
                 longitudActualMinima = longitudActual;
             }
-            else {
-                if (longitudActual < longitudActualMinima) {
-                    longitudActualMinima = longitudActual;
-                }
-            }
         }
         if (longitudActualMaxima != longitudActualMinima) {
             return false;
@@ -102,8 +98,7 @@ function obtenerSegundaDimension(matrizUno) {
 function verificarTodosLosElementosDeUnArregloSonArreglo(arreglo) {
     for (var i = 0; i < arreglo.length; i++) {
         var elementoActual = arreglo[i];
-        var esUnArreglo = typeof elementoActual == 'object' &&
-            elementoActual.indexOf; // Truty
+        var esUnArreglo = typeof elementoActual == 'object' && elementoActual.indexOf; // Truty
         if (!esUnArreglo) {
             return false;
         }
@@ -116,7 +111,7 @@ function main() {
         [3, 4, 4]
     ];
     var y = [
-        [1, 2],
+        [1, 2, 3],
         [3, 4, 4],
     ];
     var resultado = compararMatriz(x, y);
