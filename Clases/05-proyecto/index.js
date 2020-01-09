@@ -1,6 +1,21 @@
-//const sumaLibreria = require('libraryfundamentos/lib/suma'); //Node MODULES js
-//importar todo el contenido con el nombre sumaLibreria del paquete 'libreria-2019b/lib/suma'
-var sumaLibreria = require('libraryfundamentos/lib/suma');
-sumaLibreria(1, 2);
-var respuesta = sumaLibreria(1, 2);
-console.log("La respuesta es:", respuesta);
+var sumaDeber = require('libraryfundamentos/lib/suma');
+var restaDeber = require('libraryfundamentos/lib/resta');
+var multiplicacionDeber = require('libraryfundamentos/lib/multipliacion');
+var divisionDeber = require('libraryfundamentos/lib/division');
+var cilindroDeber= require('libraryfundamentos/lib/volumencilindro');
+var permutacionDeber = require('libraryfundamentos/lib/permutacion');
+var factorialDeber = require('libraryfundamentos/lib/factorial');
+var respuestaSuma = sumaDeber(1, 2);
+console.log('La respuesta de la suma de 1 + 2 es:', respuestaSuma,'\n');
+var respuestaResta = restaDeber(3,3);
+console.log('La respuesta para la resta entre 3 - 3 es:', respuestaResta,'\n');
+var respuestaMultiplicacion = multiplicacionDeber(2, 30);
+console.log('La respuesta para la multiplicacion de 2 * 30 es:', respuestaMultiplicacion,'\n');
+var respuestaDivision = divisionDeber(2, 10);
+console.log('La respuesta para la division de 2 / 10 es:', respuestaDivision,'\n');
+var respuestaCilindro = cilindroDeber(1,2);
+console.log('El volumen del cilindro de radio 1 y altura 2 es:',respuestaCilindro,'\n');
+var respuestafactorial = permutacionDeber(5,2);
+console.log('La permutacion entre 5 tomadando 2 es:', respuestafactorial,'\n');
+var respuestaFacto= factorialDeber(5);
+console.log('El factorial de 5 es:',respuestaFacto,'\n');

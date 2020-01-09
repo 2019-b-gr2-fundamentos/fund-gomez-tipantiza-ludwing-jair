@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
-    "libraryfundamentos": "^1.0.0",
-    "libreria": "^1.1.0"
-  },
-  "devDependencies": {},
   "scripts": {
-    "empezar": "(tsc index.ts||node) && node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "libraryfundamentos": "^1.1.1"
+  }
 }

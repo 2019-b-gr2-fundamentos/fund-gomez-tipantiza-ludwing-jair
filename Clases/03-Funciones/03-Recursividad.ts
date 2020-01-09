@@ -10,7 +10,7 @@ function imprimirMensajeNVeces(mensaje: string, numeroVeces: number )
 }
 
 function main(){
-   imprimirMensajeNVeces('Genesis Te Amo', 12);
+   imprimirMensajeNVeces('Hola', 12);
 }
 main();
 
