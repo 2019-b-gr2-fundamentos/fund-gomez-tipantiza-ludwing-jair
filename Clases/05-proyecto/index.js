@@ -16,6 +16,6 @@ console.log('La respuesta para la division de 2 / 10 es:', respuestaDivision,'\n
 var respuestaCilindro = cilindroDeber(1,2);
 console.log('El volumen del cilindro de radio 1 y altura 2 es:',respuestaCilindro,'\n');
 var respuestafactorial = permutacionDeber(5,2);
-console.log('La permutacion entre 5 tomadando 2 es:', respuestafactorial,'\n');
+console.log("La permutacion entre 5 tomadando 2 es:", respuestafactorial,'\n');
 var respuestaFacto= factorialDeber(5);
-console.log('El factorial de 5 es:',respuestaFacto,'\n');
+console.log("El factorial de 5 es:",respuestaFacto,'\n');
