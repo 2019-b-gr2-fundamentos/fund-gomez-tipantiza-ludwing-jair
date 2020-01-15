@@ -1,4 +1,5 @@
-import{AnimalPerrito}from'./interfaces/animal-perrito.interface'
+import{AnimalPerrito}from'./interfaces/animal-perrito.interface';
+import { Duenio } from './Interfaces/duenio.interface';
 //el ./ se utiliza cuando no existe un node moudles
 //boolean
 //string
@@ -35,8 +36,8 @@ const poliPerroAmarillo:AnimalPerrito={
     nombreCientifico:'canis lupus familiaris',
     nombre:'Amarillo',
     clan:null,
-    edad:
-    duenio:duenio
+    edad:4,
+    //duenio:duenio
 }
 
 const duenioPoliPerroAmarillo:Duenio={
