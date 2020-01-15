@@ -1,6 +1,6 @@
 //02-crus.ts create read update delete
 //const prompts=require('prompts');
-import*as prompts from'prompts';
+import* as prompts from'prompts';
 prompts 
 function main(){
 obetenerDatosAnimalPerrito();
@@ -10,17 +10,37 @@ function obetenerDatosAnimalPerrito(){
     //paradigma de programaacion
     //SINCRONO VS ASINCRONO
 
-    console.log('Inicio')
-    const edad)prompts({
+    console.log('Inicio');
+    const promesaEdad=prompts({ //promesa
         type:'number',
         name:'edad',
         message:'Puedes darme tu edad?'
-    })
-    //.then((datos)=>{console.log('datos',datos)});})
-    console.log(edad)
+    });
+    console.log(promesaEdad)
+    promesaEdad
+    .then(
+        (datos)=>{
+            console.log('datos',datos);//AQUI PUEDO SEGUIR
+            //
+            //
+            //
+            const promesaNombre=prompts({ //promesa
+                type:'text',
+                name:'nombre',
+                message:'Puedes darme tu nombre?'
+            });
+            console.log(promesaNombre)
+            promesaNombre
+            .then(
+                (datosNombre)=>{
+                    console.log('nombre',datosNombre)})
 
-
-
-    console.log('fin')
-}
+        }
+        )
+        .catch(
+            (error)=>{
+                console.log('Error',error);
+            }
+        );
+        console.log('fin');
 main();
