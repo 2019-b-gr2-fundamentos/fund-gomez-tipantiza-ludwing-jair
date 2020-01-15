@@ -19,3 +19,5 @@ var respuestafactorial = permutacionDeber(5,2);
 console.log("La permutacion entre 5 tomadando 2 es:", respuestafactorial,'\n');
 var respuestaFacto= factorialDeber(5);
 console.log("El factorial de 5 es:",respuestaFacto,'\n');
+var PI = require('libraryfundamentos/lib/pi');
+console.log('La constante pi es:', PI)
