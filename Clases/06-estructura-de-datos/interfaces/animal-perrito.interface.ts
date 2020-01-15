@@ -1,11 +1,13 @@
-import {Duenio}from'./duenio.interface';
-export interface AnimalPerrito{//interface --->(struct)
-    nombreCientifico:string,
-    nombre:string,
-    clan:null,//puedo ponerle a cualquier propiedad de la estructurad de datos el null
-    hijos?:null,
-    perritas?:String[],
-    vacunado?:boolean,
-    duenio?:Duenio;
+import { Duenio } from './duenio.interface';
+// ./ -> Relativo a donde esta el archivo 
 
+export interface AnimalPerrito { // interface -> (Struct)
+    nombreCientifico: string;
+    nombre: string;
+    clan: string;
+    edad?: number; // Opcionales
+    // hijos: null,
+    perritas?: string[]; // Opcionales
+    vacunado?: boolean; // Opcionales
+    duenio?: Duenio;
 }

@@ -1,55 +1,60 @@
-import{AnimalPerrito}from'./interfaces/animal-perrito.interface';
-import { Duenio } from './Interfaces/duenio.interface';
-//el ./ se utiliza cuando no existe un node moudles
-//boolean
-//string
-//null --->object
+import {AnimalPerrito} from './interfaces/animal-perrito.interface'
+import { Duenio } from './interfaces/duenio.interface';
+
+// boolean
+// string
+// null -> object
 // number
-// Persona
-//Animal--->Nombre cientifico,color principal,fecha de nacimiento ,peso,genero,altura
-//CASI EN TODOS LOS LENGUAJES
-//Struct-->Estructura de datos
-//Clase...>Estructura de daatos--->Metodos!
-const edad =20;
-const ejemploDeEstructura = {
-    nombreCientifico:'canis lupus familiaris',"llave":"valor",
-    noEsNecesario:true,//ultima coma ok
-    enojo:undefined,
-    edadActual:edad,//variables
-}
-const poliPerro={
-    nombreCientifico:'canis lupus familiaris',
-    nombre:'Grandote',
-    clan:'Poliperro',
-    edad:10,
-    hijos:null,
-    perritas:['Manuela','Zoraida'],
-    vacunado:true,
-}
-    console.log(poliPerro.nombre)
-//Estructura de datos en lengujae Tipado
-// A cualquier propiedad de la Struct se puede poner null
+// PERSONA
 
-// ? opcional
-    
-const poliPerroAmarillo:AnimalPerrito={
-    nombreCientifico:'canis lupus familiaris',
-    nombre:'Amarillo',
-    clan:null,
-    edad:4,
-    //duenio:duenio
+
+// CASI EN TODOS LOS LENGUAJES
+// Struct -> Estructura de datos
+// Clase -> Estructura de datos -> Metodos!
+
+// ANIMAL -> nombre cientifico, color principal
+// fecha nacimiento, peso, genero, altura 
+const edad = 20;
+const ejemploEstructura = {
+    'nombreCientifico': 'canis lupus familiaris',
+    "llave":"valor",    
+    enojo: undefined,
+    edadActual: edad, // variables 
+    noEsNecesario: true, // ultima coma ok
+}
+// Estructura de datos en lenguaje NO TIPADO
+const poliPerro = {
+    nombreCientifico: 'Canis Lupus Familiaris',
+    nombre: 'Grandote',
+    clan: 'Poliperro',
+    edad: 10,
+    hijos: null,
+    perritas: ['Manuela', 'Zoraida'],
+    vacunado: true,
+}
+console.log(poliPerro.nombre); // Canis Lupus Familiaris
+
+// Estructura de datos en lenguaje TIPADO
+const poliPerroAmarillo: AnimalPerrito = {
+    nombreCientifico: 'Canis Lupus Familiaris',
+    nombre: 'Amarillo',
+    clan: null, // A cualquier propiedad de la Struct 
+               // se puede poner "null"
+}
+const duenioPoliPerroAmarillo: Duenio = {
+    nombres: 'Adrian',
+    apellidos: '',
+    fechaNacimiento: 2,
+    mascotasPerros: [ poliPerroAmarillo ]
 }
 
-const duenioPoliPerroAmarillo:Duenio={
-        nombres:'Adrian',
-        apellidos:'',
-        fechaNacimiento:2,
-        mascotasPerros:[poliPerroAmarillo]}
-        //Guardara datos a una estructurua de datos
+// Guardar datos en una estructura de datos
+poliPerroAmarillo.duenio = duenioPoliPerroAmarillo;
+poliPerroAmarillo.edad = 4;
+poliPerroAmarillo.vacunado = true;
 
-        poliPerroAmarillo.duenio=duenioPoliPerroAmarillo;
-        poliPerroAmarillo.edad=4;
-        poliPerroAmarillo.vacunado=true;
-        //Acceder 
-        console.log(poliPerroAmarillo.duenio.nombres);
-        console.log(poliPerroAmarillo.duenio.edad);
+// Acceder a los datos de una estructura de datos
+console.log(poliPerroAmarillo.duenio.nombres);
+console.log(poliPerroAmarillo.duenio.apellidos);
+console.log(poliPerroAmarillo.nombre);
+console.log(poliPerroAmarillo.edad);

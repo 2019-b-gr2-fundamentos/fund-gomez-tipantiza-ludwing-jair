@@ -1,9 +1,9 @@
-import {AnimalPerrito}from'./animal-perrito.interface';
+import { AnimalPerrito} from './animal-perrito.interface';
 
-export interface Duenio{
-    nombres:string,
-    apellidos:string,
-    cedula?:string,
-    fechaNacimiento:number;
-    mascotasPerros?:AnimalPerrito[];
+export interface Duenio { // interface -> (Struct)
+    nombres: string;
+    apellidos: string;
+    cedula?: string;
+    fechaNacimiento: number;
+    mascotasPerros?: AnimalPerrito[];
 }
