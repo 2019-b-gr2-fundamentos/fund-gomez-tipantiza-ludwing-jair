@@ -1,46 +1,88 @@
-//02-crus.ts create read update delete
-//const prompts=require('prompts');
-import* as prompts from'prompts';
-prompts 
+// 02-crud.ts create read update delete
+// const prompts = require('prompts');
+import * as prompts from 'prompts';
+import { RespuestaEdad } from './interfaces/respuesta-edad.interface';
+import { RespuestaNombre } from './interfaces/respuesta-nombre.interface';
+
 function main(){
-obetenerDatosAnimalPerrito();
+    // npm uninstall -g tsc -> WINDOWS
+    // npm uninstall -g typescript -> WINDOWS
+    // npm install -g typescript -> WINDOWS
+    // sudo npm uninstall -g tsc -> LINUX O MAC
+    // sudo npm install -g typescript -> LINUX O MAC
+
+    // obtenerDatosAnimalPerrito(); // Asincrona
+    obtenerDatosAnimalPerritoSincrono()
+    .then()
+    .catch(); // -> PROMESA // Sincrona
 }
-function obetenerDatosAnimalPerrito(){
 
-    //paradigma de programaacion
-    //SINCRONO VS ASINCRONO
-
+async function obtenerDatosAnimalPerritoSincrono(){
     console.log('Inicio');
-    const promesaEdad=prompts({ //promesa
-        type:'number',
-        name:'edad',
-        message:'Puedes darme tu edad?'
-    });
-    console.log(promesaEdad)
-    promesaEdad
-    .then(
-        (datos)=>{
-            console.log('datos',datos);//AQUI PUEDO SEGUIR
-            //
-            //
-            //
-            const promesaNombre=prompts({ //promesa
-                type:'text',
-                name:'nombre',
-                message:'Puedes darme tu nombre?'
-            });
-            console.log(promesaNombre)
-            promesaNombre
-            .then(
-                (datosNombre)=>{
-                    console.log('nombre',datosNombre)})
-
+    const preguntas = [
+        {
+            type: 'number',//-->Un Objeto
+            name: 'edad',
+            message: 'Puedes darme tu edad?'
+        },
+        {
+            type: 'text',
+            name: 'nombre',
+            message: 'Puedes darme tu nombre?'
+        },
+        { 
+            type: 'text',
+            name: 'cedula',
+            message: 'Puedes darme tu cedula?'
         }
+    ]
+    const respuestaEdad = await prompts(preguntas);
+    console.log('Respuesta', respuestaEdad);
+    console.log('Fin');
+}
+
+function obtenerDatosAnimalPerrito(){
+    // Paradigma de programacion
+    // SINCRONO vs ASINCRONO
+    console.log('Inicio');
+    const promesaEdad = prompts({ // PROMESA
+        type: 'number',
+        name: 'edad',
+        message: 'Puedes darme tu edad?'
+      });
+    console.log(promesaEdad);
+    promesaEdad
+        .then( // OK
+          (datos)=>{
+              console.log('datos',datos); // AQUI PUEDO SEGUIR
+              ////
+                const promesaNombre = prompts({ // PROMESA
+                    type: 'text',
+                    name: 'nombre',
+                    message: 'Puedes darme tu nombre?'
+                });
+                promesaNombre
+                    .then( // OK
+                        (datosNombre)=>{
+                            console.log('Nombre', datosNombre); // AQUI PUEDO SEGUIR
+                        }
+                    )
+                    .catch( // =( 
+                        (error)=>{
+                            console.log('Error',error);
+                        }
+                    );
+              ///
+          }
         )
-        .catch(
+        .catch( // =( 
             (error)=>{
                 console.log('Error',error);
             }
         );
-        console.log('fin');
+    
+    console.log('Fin');
+}
 main();
+
+
