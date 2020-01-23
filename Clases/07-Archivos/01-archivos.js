@@ -36,15 +36,19 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+var _02_leer_archivo_1 = require("./02-leer-archivo");
 var prompts = require("prompts");
 function main() {
     return __awaiter(this, void 0, void 0, function () {
-        var contador, arregloEstudiantes, arregloPreguntas, respuestaEstudianteUno, nuevoRegistroUno, respuestaEstudianteDos, nuevoRegistroDos, idABuscar, indiceEncontrado, nombreAEditar, buscar, estudianteEncontrado;
+        var contador, contenidoArchivo, arregloCargadoDeArchivo, arregloEstudiantes, arregloPreguntas, respuestaEstudianteUno, nuevoRegistroUno, respuestaEstudianteDos, nuevoRegistroDos, idABuscar, indiceEncontrado, nombreAEditar, buscar, estudianteEncontrado;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
                     contador = 1;
-                    arregloEstudiantes = [];
+                    contenidoArchivo = _02_leer_archivo_1.leerArchivo('./ejemplo.txt');
+                    console.log('contenidoArchivo', contenidoArchivo);
+                    arregloCargadoDeArchivo = JSON.parse(contenidoArchivo);
+                    arregloEstudiantes = arregloCargadoDeArchivo;
                     arregloPreguntas = [
                         {
                             type: 'text',
