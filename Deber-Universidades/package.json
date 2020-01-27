@@ -1,0 +1,14 @@
+{
+  "name": "deber-universidades",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "(tsc universidades.ts --target ES5|| echo) && node universidades.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompts": "^2.3.0"
+  }
+}
