@@ -1,32 +1,14 @@
 // Crear, borrar actualizar, buscar
 import * as  prompts from './node_modules/prompts';
-import {leerMejoresUni} from'./leer-archivo';
 import { formatoUni } from './interfaces/formatocincomejoresuniversidades.interface';
 
+let id=1
+let bestUniverS5: formatoUni[] = [];
 
 function main(){
     mejoresUniversidades().then().catch();}
 
-async function mejoresUniversidades() {
-
-    const contenidoPredeterminado= leerMejoresUni('./Mejoresuniversidades.txt');
-    const convertirArchivo = JSON.parse (contenidoPredeterminado);
-    const bestUniverS5:formatoUni[] = convertirArchivo;
-
-    console.log('Según varios estudios las mejores universidades del Ecuador son las siguientes:\n',bestUniverS5);
-    console.log('¿Te animas a completar el top five?')
-    const decision = await prompts(
-        {
-            type: 'number',
-            name: 'siono',
-            message:'PRESIONA\n0-->SI\n1-->NO,prefiero cantar tusa xd xd '
-        }
-    )
-    if(decision.siono==1){
-        console.log('Neta me lo juras?')
-        console.log('OK,ADIOS')
-    }else if(decision.siono==0){
-    
+async function mejoresUniversidades() { 
     const ingresandoDatosUni = [
         {
             type: 'text',
@@ -57,91 +39,110 @@ async function mejoresUniversidades() {
     ]
     const respuestas = await prompts(ingresandoDatosUni);
     const uniIngresada:formatoUni = 
-    { Nombre: respuestas.Nombre, NumeroEst: respuestas.NumeroEst,AnioFund: respuestas.AnioFund,
-        LugarDondeBebenLosEst: respuestas.LugarDondeBebenLosEst,LugarUbi:respuestas.LugarUbi }
+    {Id:id,Nombre: respuestas.Nombre, NumeroEst: respuestas.NumeroEst,AnioFund: respuestas.AnioFund,
+        LugarDondeBebenLosEst: respuestas.LugarDondeBebenLosEst,LugarUbi:respuestas.LugarUbi };
+        id=id+1
         
         bestUniverS5.push(uniIngresada);
-
-    console.log('Venga,has ingresado ya,la  universidad que faltaba',bestUniverS5);
-
-    const preguntarSiOcurrioAlgunError = await prompts(
+        console.log(bestUniverS5)
+        preguntarUsuario().then().catch()
+}
+async function preguntarUsuario(){
+    
+    const decision = await prompts(
         {
             type: 'number',
-            name: 'Error',
-            message:'PRESIONA\n1-->editar datos de tu universidad\n2-->eliminar tu universidad\n3--->Salir' 
+            name: 'siono',
+            message:'PRESIONA\n0-->Agregar mas universidades\n1-->Editar tus universidades\n2--->Eliminar una universidad\n3-->Salir'
         }
     )
-    
-    if(preguntarSiOcurrioAlgunError.Error == 1){
-        console.log('Ahora trataremos de solucionar este error');
-
-    const nombreUniversidadAEditar: string[] = [bestUniverS5[0].Nombre, bestUniverS5[1].Nombre, bestUniverS5[2].Nombre,bestUniverS5[3].Nombre,bestUniverS5[4].Nombre];
-    console.log(nombreUniversidadAEditar);
-
-            const buscarUnversidad= await prompts(
-                {
-                    type: 'text',
-                    name: 'Nombre',
-                    message: '\nNombre de la Universidad a editar?:'
-                }
-            );
+    if(decision.siono==0){
+        mejoresUniversidades().then().catch();
         
-            const posicionUniMalTipada = bestUniverS5.findIndex(
-                function(valorActual){
-                    return valorActual.Nombre == buscarUnversidad.Nombre; 
-                }  
-            );        
-            const datosNuevoDeUniversidadaMalTipada= [
-                {
-                    type: 'text',
-                    name: 'Nombre',
-                    message: 'Ingresa el nombre de la Universidad:',
-                },
-                {
-                    type: 'number',
-                    name: 'NumeroEst',
-                    message: 'Ingresa el numero de estudiantes de la universidaad: ',
-        
-                },
-                {
-                    type: 'number',
-                    name: 'AnioFund',
-                    message: 'Ingresa el año de fundacion de la universidad:',
-                },
-                {
-                    type: 'text',
-                    name: 'LugarDondeBebenLosEst',
-                    message: 'Ingresa en el lugar mas cerca donde ingieren alcohol sus estudiantes:',
-                },
-                {
-                    type: 'text',
-                    name: 'LugarUbi',
-                    message: 'Ingresa en que ciudad esta ubicada:',
-                }
-            ]
-            const respuestasUniversidadEditada = await prompts(datosNuevoDeUniversidadaMalTipada);
-            
-            const definitivoUniversidadEditada:formatoUni= { Nombre: respuestasUniversidadEditada.Nombre,NumeroEst: respuestasUniversidadEditada.NumeroEst,
-                AnioFund: respuestasUniversidadEditada.AnioFund,LugarDondeBebenLosEst: respuestasUniversidadEditada.LugarDondeBebenLosEst,
-                LugarUbi:respuestasUniversidadEditada.LugarUbi 
-        
-            }
-        
-            bestUniverS5[posicionUniMalTipada] =definitivoUniversidadEditada;
-        
-            console.log('Esperemos que no te hayas equivocado esta vez');
-            console.log('tu top five es',bestUniverS5)
-
-    }else if(preguntarSiOcurrioAlgunError.Error == 2){
-        console.log("Entendemos que para ti solo hay 4 mejores universidades,procedermos a eliminar tu universidad")
-        bestUniverS5.pop();
-        console.log(bestUniverS5);
-        console.log('Ahora hemos eliminado tu universidad :C')
-    }else if(preguntarSiOcurrioAlgunError.Error == 3){
-        console.log('Me siento muy feliz de tu elección')
-
+    }else if(decision.siono==1){
+        menuEditar().then().catch();
+    }else if(decision.siono==2){
+        eliminarRegistro().then().catch();
+    }else if(decision.siono==3){
+        console.log('ADIOOOOOOS PRRRO')
     }
-}
-}
 
+async function menuEditar(){
+    const IdAEditar = await prompts({
+    type: 'number',
+    name: 'Id',
+    message: 'Ingrese el Id de la U cuya informacion desea editar'
+});
+const AidEncontrado = bestUniverS5.findIndex(
+    function(valorActual){
+    return valorActual.Id == IdAEditar.Id
+    }
+);
+const queVaAEditar = await prompts({
+    type: 'text',
+    name: 'campoAEditar',
+    message: '¿Que campo desea editar,debe escribir el campo tal cual esta en su pantalla?'
+});
+const respuestaCampo = queVaAEditar.campoAEditar;
+if(respuestaCampo == 'Nombre'){
+    const nuevoNombre = await prompts({
+        type: 'text',
+        name: 'nuevoNombre',
+        message: 'Ingrese el nombre de la U'
+    });
+    bestUniverS5[AidEncontrado].Nombre = nuevoNombre.nuevoNombre;
+}else if(respuestaCampo == 'NumeroEst'){
+    const nuevonNumeroEst = await prompts({
+        type: 'number',
+        name: 'nuevosEs',
+        message: 'Ingrese el numero de estudiantes real'
+    });
+    bestUniverS5[AidEncontrado].NumeroEst = nuevonNumeroEst.nuevosEs;
+}else if(respuestaCampo == 'AnioFund'){
+    const nuevoAño = await prompts({
+        type: 'number',
+        name: 'añoFundacionNue',
+        message: 'Ingrese el nuevo año de fundacion'
+    });
+    bestUniverS5[AidEncontrado].AnioFund = nuevoAño.añoFundacionNue;
+}else if(respuestaCampo == 'LugarDondeBebenLosEst'){
+    const nuevoLugar= await prompts({
+        type: 'text',
+        name: 'nuevoBar',
+        message: 'Ingrese el nuevo bar a donde van a beber'
+    });
+    bestUniverS5[AidEncontrado].LugarDondeBebenLosEst = nuevoLugar.nuevoBar;
+}else if(respuestaCampo == 'LugarUbi'){
+    const nuevaCiudad = await prompts({
+        type: 'text',
+        name: 'City',
+        message: 'Ingrese la nueva ciudad'
+    });
+    bestUniverS5[AidEncontrado].LugarUbi= nuevaCiudad.City;
+}else{
+    console.log('Ingrese un campo valido');
+};
+console.log('El registro de tus mejores universidades:', bestUniverS5);
+preguntarUsuario().then().catch();
+return bestUniverS5
+
+
+};
+async function eliminarRegistro(){
+    const AidAEliminar = await prompts({
+    type: 'number',
+    name: 'Id',
+    message: 'Ingrese el id de la Universidad a eliminar'
+});
+const AidEncontrado = bestUniverS5.findIndex(
+    function(valorActual){
+    return valorActual.Id == AidAEliminar.Id
+    }
+);
+bestUniverS5.splice(AidEncontrado, 1);
+console.log('La mejores son:', bestUniverS5);
+preguntarUsuario().then().catch();
+return bestUniverS5
+}}
+    
 main();
