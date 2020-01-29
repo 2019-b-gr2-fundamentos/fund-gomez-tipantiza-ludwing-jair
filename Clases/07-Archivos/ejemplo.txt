@@ -1,7 +1,1 @@
-[
-    
-    {
-        "id":100,
-        "nombre":"Pepito"
-    }
-]
+[{"id":100,"nombre":"Pepito"},{"id":1,"nombre":""},{"id":2,"nombre":"jaire"}]

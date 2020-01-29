@@ -75,7 +75,7 @@ async function mejoresUniversidades() {
     if(preguntarSiOcurrioAlgunError.Error == 1){
         console.log('Ahora trataremos de solucionar este error');
 
-    const nombreUniversidadAEditar: string[] = [bestUniverS5[0].Nombre, bestUniverS5[1].Nombre, bestUniverS5[2].Nombre,bestUniverS5[3]];
+    const nombreUniversidadAEditar: string[] = [bestUniverS5[0].Nombre, bestUniverS5[1].Nombre, bestUniverS5[2].Nombre,bestUniverS5[3].Nombre,bestUniverS5[4].Nombre];
     console.log(nombreUniversidadAEditar);
 
             const buscarUnversidad= await prompts(

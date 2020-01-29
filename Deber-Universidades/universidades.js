@@ -109,7 +109,7 @@ function mejoresUniversidades() {
                     preguntarSiOcurrioAlgunError = _a.sent();
                     if (!(preguntarSiOcurrioAlgunError.Error == 1)) return [3 /*break*/, 7];
                     console.log('Ahora trataremos de solucionar este error');
-                    nombreUniversidadAEditar = [bestUniverS5[0].Nombre, bestUniverS5[1].Nombre, bestUniverS5[2].Nombre, bestUniverS5[3]];
+                    nombreUniversidadAEditar = [bestUniverS5[0].Nombre, bestUniverS5[1].Nombre, bestUniverS5[2].Nombre, bestUniverS5[3], bestUniverS5[4]];
                     console.log(nombreUniversidadAEditar);
                     return [4 /*yield*/, prompts({
                             type: 'text',
