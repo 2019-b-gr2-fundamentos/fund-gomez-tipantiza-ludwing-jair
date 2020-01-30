@@ -41,14 +41,15 @@ function main1() {
     console.log('respuestaFilter,', respuestaFilter);
     console.log('arregloEstudiantes', arregloEstudiantes);
     /*AND --> EVERY (TODOS CUMPLAN) /OR-->SOME (UNO CUMPLE)
+
     SOME--> DEVUELVE VERDADERO O FALSO DEPENDE DE LA CONDICION
     SI ALGUNO CUMPLE DEVUELVE TRUE
-    SI ALGUNO CUMPLE DECUELVE FALSE
+    SI ninguno CUMPLE DECUELVE FALSE
     ENVIAMOS CONDICION
     RECIBIMOS BOOLEANO*/
     const respuestaSome = arregloEstudiantes
         .some(function (valorActual, i, arr) {
-        const condicion = valorActual < 7;
+        const condicion = valorActual > 9;
         return condicion;
     });
     console.log('respuesta some ', respuestaSome);
@@ -61,7 +62,7 @@ function main1() {
     */
     const respuestaEvery = arregloEstudiantes
         .every(function (valorActual, i, arr) {
-        const condicion = valorActual.nota >= 4;
+        const condicion = valorActual.nota >= 7;
         return condicion;
     });
     console.log('respuesta every', respuestaEvery);
@@ -73,10 +74,12 @@ function main1() {
         .reduce(function (acumulador, valorActual, i, arr) {
         const calculo = acumulador + valorActual.nota;
         return calculo;
-    }, 0 //valor 
+    }, 0 //valor acumulador
     );
     console.log('respuestaReduce', respuestaReduce);
     console.log('promedio', respuestaReduce / arregloEstudiantes.length);
     console.log('arregloEstudiantes', arregloEstudiantes);
 }
 main1();
+//reduce del principio al final 
+//reduceright del final al principios

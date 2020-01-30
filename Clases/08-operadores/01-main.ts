@@ -58,15 +58,16 @@ const respuestaFilter = arregloEstudiantes
         console.log('respuestaFilter,',respuestaFilter);
         console.log('arregloEstudiantes', arregloEstudiantes)
         /*AND --> EVERY (TODOS CUMPLAN) /OR-->SOME (UNO CUMPLE)
+
         SOME--> DEVUELVE VERDADERO O FALSO DEPENDE DE LA CONDICION
         SI ALGUNO CUMPLE DEVUELVE TRUE
-        SI ALGUNO CUMPLE DECUELVE FALSE
+        SI ninguno CUMPLE DECUELVE FALSE
         ENVIAMOS CONDICION
         RECIBIMOS BOOLEANO*/
         const respuestaSome=arregloEstudiantes
                             .some(
                                 function(valorActual,i,arr){
-                                    const condicion=valorActual<7;
+                                    const condicion=valorActual>7;
                                     return condicion
                                 }
                             );
@@ -82,7 +83,7 @@ const respuestaFilter = arregloEstudiantes
    const respuestaEvery=arregloEstudiantes
    .every(
        function(valorActual,i,arr){
-           const condicion=valorActual.nota>=4;
+           const condicion=valorActual.nota>=7;
            return condicion;
        }
    );
