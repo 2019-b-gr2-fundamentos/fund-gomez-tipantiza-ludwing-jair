@@ -1,6 +1,7 @@
 {
   "name": "08-operadores",
   "version": "1.0.0",
+<<<<<<< HEAD
   "main": "index.js",
   "scripts": {
     "start": "(tsc  01-main.ts --target ES55 || echo) && node 01-main.js"
@@ -8,4 +9,13 @@
   "author": "",
   "license": "ISC",
   "description": ""
+=======
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "(tsc 01-main.ts --target ES5 || echo) && node 01-main.js"
+  },
+  "author": "",
+  "license": "ISC"
+>>>>>>> desarrollo
 }
