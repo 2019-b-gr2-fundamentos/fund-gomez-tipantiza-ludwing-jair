@@ -1,4 +1,6 @@
-function main1() {
+import { filter } from "./02-filter";
+import { map } from "./03-map";
+function main() {
     const arregloEstudiantes = [
         { id: 1, nombre: 'Adrian', nota: 7 },
         { id: 2, nombre: 'Vicente', nota: 9 },
@@ -40,46 +42,61 @@ function main1() {
     });
     console.log('respuestaFilter,', respuestaFilter);
     console.log('arregloEstudiantes', arregloEstudiantes);
-    /*AND --> EVERY (TODOS CUMPLAN) /OR-->SOME (UNO CUMPLE)
-
-    SOME--> DEVUELVE VERDADERO O FALSO DEPENDE DE LA CONDICION
-    SI ALGUNO CUMPLE DEVUELVE TRUE
-    SI ninguno CUMPLE DECUELVE FALSE
-    ENVIAMOS CONDICION
-    RECIBIMOS BOOLEANO*/
+    //AND -> every ( todos cumplan) / OR solo uno cumpla
+    //Some -> Devuelve verdadero o falso dependiendo de la cond.
+    // Si alguno cumple Devuelve TRUE
+    // Si ninguno cumple devuelve FALSE
+    // ENVIAMOS -> Condicion
+    // RECIBIMOS -> Booleano
     const respuestaSome = arregloEstudiantes
-        .some(function (valorActual, i, arr) {
-        const condicion = valorActual > 9;
+        .some(function (valorActual, i, arreglo) {
+        const condicion = valorActual.nota < 4;
+        // CONDICION TRUTY O TRUE
         return condicion;
     });
-    console.log('respuesta some ', respuestaSome);
-    console.log('arreglo estudiantes', arregloEstudiantes);
-    /*every
-    todos cumple verdadero
-    ninguno cumple falso
-    enviamos condicion
-    recibir booleano
-    */
+    console.log('respuestaSome', respuestaSome);
+    console.log('respuestaEstudiantes', arregloEstudiantes);
+    //Every -> Devuelve verdadero o falso dependiendo de la cond.
+    // Si todos cumplen la cond TRUE
+    // Si alguno no cumple la condicion FALSE
+    // ENVIAMOS -> Condicion
+    // RECIBIMOS -> Booleano
     const respuestaEvery = arregloEstudiantes
-        .every(function (valorActual, i, arr) {
-        const condicion = valorActual.nota >= 7;
+        .every(function (valorActual, i, arreglo) {
+        const condicion = valorActual.nota >= 4;
+        // CONDICION TRUTY O TRUE
         return condicion;
     });
-    console.log('respuesta every', respuestaEvery);
-    console.log('arreglo estudiantes', arregloEstudiantes);
-    //reduce -->devuelve un valor con el cálculo aplicado
-    //enviamos -->calculo
-    //recibir--> valor 
+    console.log('respuestaEvery', respuestaEvery);
+    console.log('respuestaEstudiantes', arregloEstudiantes);
+    //Reduce -> devuelve un valor con el calculo aplicado
+    //ENVIAMOS -> CALCULO
+    //RECIBIR -> VALOR
     const respuestaReduce = arregloEstudiantes
-        .reduce(function (acumulador, valorActual, i, arr) {
-        const calculo = acumulador + valorActual.nota;
+        .reduce(function (acumulador, valorActual) {
+        const calculo = acumulador - valorActual.nota;
         return calculo;
-    }, 0 //valor acumulador
+    }, 100 //valor inicial del acumulador
     );
     console.log('respuestaReduce', respuestaReduce);
     console.log('promedio', respuestaReduce / arregloEstudiantes.length);
-    console.log('arregloEstudiantes', arregloEstudiantes);
+    console.log('respuestaEstudiantes', arregloEstudiantes);
+    const respuestaFilterNuestro = filter(arregloEstudiantes, function (valorActual, i, arr) {
+        console.log('valor:', valorActual);
+        console.log('Indice:', i);
+        console.log('arreglo:', arr);
+        return valorActual.nota >= 7;
+    });
+    console.log('respuestaFilterNuevo', respuestaFilterNuestro),
+        console.log('arregloEstudiantes', arregloEstudiantes);
+    const respuestaMapNuestro = map(arregloEstudiantes, 9, function (valorActual, i, arry) {
+        console.log('valor:', valorActual);
+        console.log('arreglo:', arry);
+        console.log('Indice:', i);
+        return valorActual.nota >= 7;
+        return valorActual.nota * 9;
+    });
+    console.log('respuestaMapNuevo', respuestaMapNuestro),
+        console.log('arreglo estudiantes', arregloEstudiantes);
 }
-main1();
-//reduce del principio al final 
-//reduceright del final al principios
+main();

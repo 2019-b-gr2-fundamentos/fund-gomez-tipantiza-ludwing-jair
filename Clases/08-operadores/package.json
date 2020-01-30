@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "(tsc  01-main.ts --target ES2015 || echo) && node 01-main.js"
+    "start": "(tsc  01-main.ts --target ES55 || echo) && node 01-main.js"
   },
   "author": "",
   "license": "ISC",

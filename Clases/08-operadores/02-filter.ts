@@ -25,6 +25,5 @@ if(respuestaFuncion==true){
 arregloFiltradro.push(arreglo[i]);
 }
 }
-
 return arregloFiltradro;
 }
