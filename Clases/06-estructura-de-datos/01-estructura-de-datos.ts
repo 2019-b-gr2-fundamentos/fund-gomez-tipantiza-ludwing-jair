@@ -8,19 +8,22 @@ import { Duenio } from './interfaces/duenio.interface';
 // PERSONA
 
 
-// CASI EN TODOS LOS LENGUAJES
+// CASI EN TODOS LOS LENGUAJES se utilizan
 // Struct -> Estructura de datos
-// Clase -> Estructura de datos -> Metodos!
-
+//Otra forma diferente de definir una estrutura de datos
+// Clase -> Estructura de datos(solo guarda datos)
+//pero con clases ya utiliza métodos
 // ANIMAL -> nombre cientifico, color principal
 // fecha nacimiento, peso, genero, altura 
 const edad = 20;
 const ejemploEstructura = {
-    'nombreCientifico': 'canis lupus familiaris',
+    'nombreCientifico': 'canis lupus familiaris', //utilizar comiilas simples
+    //si vale poner comentarios
     "llave":"valor",    
-    enojo: undefined,
+    enojo: undefined, //undefined ok
     edadActual: edad, // variables 
     noEsNecesario: true, // ultima coma ok
+    //se puede ocupar llaves simples
 }
 // Estructura de datos en lenguaje NO TIPADO
 const poliPerro = {
@@ -34,12 +37,13 @@ const poliPerro = {
 }
 console.log(poliPerro.nombre); // Canis Lupus Familiaris
 
-// Estructura de datos en lenguaje TIPADO
+// Antes no la tipamos pero ahora tenenmos una 
+//Estructura de datos en lenguaje TIPADO
 const poliPerroAmarillo: AnimalPerrito = {
     nombreCientifico: 'Canis Lupus Familiaris',
     nombre: 'Amarillo',
-    clan: null, // A cualquier propiedad de la Struct 
-               // se puede poner "null"
+    clan: null, 
+    // A cualquier propiedad de la Structse puede poner "null"
 }
 const duenioPoliPerroAmarillo: Duenio = {
     nombres: 'Adrian',

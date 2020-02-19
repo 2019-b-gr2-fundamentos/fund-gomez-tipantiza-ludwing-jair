@@ -1,21 +1,30 @@
-export function calcular(funcion, numUno, numDos) {
-    const valorInicial = 10;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function calcular(funcion, numUno, numDos) {
+    var valorInicial = 10;
     return funcion(numUno, numDos, valorInicial);
 }
-export function sumar(numUno, numDos, valorInicial) {
+exports.calcular = calcular;
+;
+function sumar(numUno, numDos, valorInicial) {
     return numUno + numDos;
 }
-calcular(sumar, 1, 1);
+exports.sumar = sumar;
+;
+calcular(sumar, 1, 2); // 3
 calcular(function (numUno, numDos, valorInicial) {
     return numUno - numDos;
-}, 5, 2);
-export function filter(arreglo, funcion) {
-    const arregloFiltradro = [];
-    for (let i = 0; i < arreglo.length; i++) {
-        const respuestaFuncion = funcion(arreglo[i], i, arreglo);
+}, 5, 3); // 2
+function filter(arreglo, funcion) {
+    var arregloFiltrado = [];
+    for (var i = 0; i < arreglo.length; i++) {
+        var respuestaFuncion = funcion(arreglo[i]);
         if (respuestaFuncion == true) {
-            arregloFiltradro.push(arreglo[i]);
+            arregloFiltrado.push(arreglo[i]);
         }
+        ;
     }
-    return arregloFiltradro;
+    ;
+    return arregloFiltrado;
 }
+exports.filter = filter;

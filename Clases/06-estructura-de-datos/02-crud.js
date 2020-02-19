@@ -38,18 +38,29 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 // 02-crud.ts create read update delete
 // const prompts = require('prompts');
-var prompts = require("prompts");
+var prompts = require("./node_modules/prompts");
 function main() {
+    //Los lenguajes de programación asíncronos se basan en llamadas
+    // que pueden ser cumplidas ahora o en un futuro. Es decir,
+    // las variables pueden ser llenadas
+    // o asignadas en cualquier momento de la ejecución del programa.
+    //síncronos. Es decir, una orden solo se puede ejecutar
+    // luego que se ejecuta la anterior.
+    // Esto es muy beneficioso para el programador,
+    // debido a que no tiene que preocuparse de cuando los datos estarán listos
+    // El problema de estos tipos
+    // de lenguajes es que los procesos ocupan más memoria, y son menos eficientes.
     // npm uninstall -g tsc -> WINDOWS
     // npm uninstall -g typescript -> WINDOWS
     // npm install -g typescript -> WINDOWS
     // sudo npm uninstall -g tsc -> LINUX O MAC
     // sudo npm install -g typescript -> LINUX O MAC
     // obtenerDatosAnimalPerrito(); // Asincrona
-    obtenerDatosAnimalPerritoSincrono()
-        .then()
-        .catch(); // -> PROMESA // Sincrona
+    obtenerDatosAnimalPerritoSincrono().then().catch();
+    // -> PROMESA // ASincrona
 }
+//paradigma de programacion
+// asincrona
 function obtenerDatosAnimalPerritoSincrono() {
     return __awaiter(this, void 0, void 0, function () {
         var preguntas, respuestaEdad;
@@ -84,6 +95,7 @@ function obtenerDatosAnimalPerritoSincrono() {
         });
     });
 }
+//asincrona sin atajos
 function obtenerDatosAnimalPerrito() {
     // Paradigma de programacion
     // SINCRONO vs ASINCRONO
@@ -95,7 +107,7 @@ function obtenerDatosAnimalPerrito() {
     });
     console.log(promesaEdad);
     promesaEdad
-        .then(// OK
+        .then(// debo poner esto para cumplir o no cumplir la promesas
     function (datos) {
         console.log('datos', datos); // AQUI PUEDO SEGUIR
         ////
