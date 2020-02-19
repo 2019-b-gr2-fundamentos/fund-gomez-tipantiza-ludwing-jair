@@ -1,4 +1,4 @@
-function main(){
+function main1(){
     let uno = 1;
     let dos = uno; // valor
     let tres = dos; // valor
@@ -122,4 +122,4 @@ function main(){
     console.log('copia3', copia3);
 };
 
-main();
+main1();

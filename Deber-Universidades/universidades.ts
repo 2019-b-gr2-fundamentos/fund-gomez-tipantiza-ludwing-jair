@@ -1,9 +1,27 @@
 // Crear, borrar actualizar, buscar
 import * as  prompts from './node_modules/prompts';
 import { formatoUni } from './interfaces/formatocincomejoresuniversidades.interface';
+import { leerArchivo } from '../Clases/07-Archivos/02-leer-archivo';
+import { escribirArchivo } from '../Clases/07-archivos/03-escribir-archivo';
 
-let id=1
-let bestUniverS5: formatoUni[] = [];
+
+let id=0;
+const contenidoArchivo= leerArchivo('./mejoresU.txt');
+let arregloUniversidadesCargadoArchivo=JSON.parse(contenidoArchivo)
+let id1=0;
+arregloUniversidadesCargadoArchivo
+        .forEach(
+            function(valorActual){
+                const idActual = valorActual.Id;
+                if(idActual > id1){
+                    id1 = idActual;
+                }
+            }
+        );
+    id1 = id1 + 1;
+            id = id1;
+
+let bestUniverS5: formatoUni[] =arregloUniversidadesCargadoArchivo;
 
 function main(){
     mejoresUniversidades().then().catch();}
@@ -18,7 +36,7 @@ async function mejoresUniversidades() {
         {
             type: 'number',
             name: 'NumeroEst',
-            message: 'Ingresa el numero de estudaiantes de la universidaad: ',
+            message: 'Ingresa el numero de estudiantes de la universidaad: ',
 
         },
         {
@@ -36,15 +54,17 @@ async function mejoresUniversidades() {
             name: 'LugarUbi',
             message: 'Ingresa en que ciudad esta ubicada:',
         }
-    ]
+    ];
     const respuestas = await prompts(ingresandoDatosUni);
-    const uniIngresada:formatoUni = 
+    const uniIngresada= 
     {Id:id,Nombre: respuestas.Nombre, NumeroEst: respuestas.NumeroEst,AnioFund: respuestas.AnioFund,
         LugarDondeBebenLosEst: respuestas.LugarDondeBebenLosEst,LugarUbi:respuestas.LugarUbi };
         id=id+1
         
         bestUniverS5.push(uniIngresada);
-        console.log(bestUniverS5)
+        console.log('Tus universidades son',bestUniverS5);
+        const arregloParseado = JSON.stringify(bestUniverS5);
+        escribirArchivo('./mejoresU.txt', arregloParseado);
         preguntarUsuario().then().catch()
 }
 async function preguntarUsuario(){
@@ -122,12 +142,13 @@ if(respuestaCampo == 'Nombre'){
 }else{
     console.log('Ingrese un campo valido');
 };
-console.log('El registro de tus mejores universidades:', bestUniverS5);
+console.log('El registro de tus mejores universidades:',bestUniverS5);
+const nuevoRegistroStringificado = JSON.stringify(bestUniverS5);
+escribirArchivo('./mejoresU.txt', nuevoRegistroStringificado);
 preguntarUsuario().then().catch();
 return bestUniverS5
-
-
 };
+
 async function eliminarRegistro(){
     const AidAEliminar = await prompts({
     type: 'number',
@@ -141,6 +162,8 @@ const AidEncontrado = bestUniverS5.findIndex(
 );
 bestUniverS5.splice(AidEncontrado, 1);
 console.log('La mejores son:', bestUniverS5);
+const registroBorrado = JSON.stringify(bestUniverS5);
+escribirArchivo('./mejoresU.txt', registroBorrado);
 preguntarUsuario().then().catch();
 return bestUniverS5
 }}

@@ -38,14 +38,28 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 Object.defineProperty(exports, "__esModule", { value: true });
 // Crear, borrar actualizar, buscar
 var prompts = require("./node_modules/prompts");
-var id = 1;
-var bestUniverS5 = [];
+var _02_leer_archivo_1 = require("../Clases/07-Archivos/02-leer-archivo");
+var _03_escribir_archivo_1 = require("../Clases/07-archivos/03-escribir-archivo");
+var id = 0;
+var contenidoArchivo = _02_leer_archivo_1.leerArchivo('./mejoresU.txt');
+var arregloUniversidadesCargadoArchivo = JSON.parse(contenidoArchivo);
+var id1 = 0;
+arregloUniversidadesCargadoArchivo
+    .forEach(function (valorActual) {
+    var idActual = valorActual.Id;
+    if (idActual > id1) {
+        id1 = idActual;
+    }
+});
+id1 = id1 + 1;
+id = id1;
+var bestUniverS5 = arregloUniversidadesCargadoArchivo;
 function main() {
     mejoresUniversidades().then().catch();
 }
 function mejoresUniversidades() {
     return __awaiter(this, void 0, void 0, function () {
-        var ingresandoDatosUni, respuestas, uniIngresada;
+        var ingresandoDatosUni, respuestas, uniIngresada, arregloParseado;
         return __generator(this, function (_a) {
             switch (_a.label) {
                 case 0:
@@ -58,7 +72,7 @@ function mejoresUniversidades() {
                         {
                             type: 'number',
                             name: 'NumeroEst',
-                            message: 'Ingresa el numero de estudaiantes de la universidaad: ',
+                            message: 'Ingresa el numero de estudiantes de la universidaad: ',
                         },
                         {
                             type: 'number',
@@ -83,7 +97,9 @@ function mejoresUniversidades() {
                         LugarDondeBebenLosEst: respuestas.LugarDondeBebenLosEst, LugarUbi: respuestas.LugarUbi };
                     id = id + 1;
                     bestUniverS5.push(uniIngresada);
-                    console.log(bestUniverS5);
+                    console.log('Tus universidades son', bestUniverS5);
+                    arregloParseado = JSON.stringify(bestUniverS5);
+                    _03_escribir_archivo_1.escribirArchivo('./mejoresU.txt', arregloParseado);
                     preguntarUsuario().then().catch();
                     return [2 /*return*/];
             }
@@ -94,7 +110,7 @@ function preguntarUsuario() {
     return __awaiter(this, void 0, void 0, function () {
         function menuEditar() {
             return __awaiter(this, void 0, void 0, function () {
-                var IdAEditar, AidEncontrado, queVaAEditar, respuestaCampo, nuevoNombre, nuevonNumeroEst, nuevoAño, nuevoLugar, nuevaCiudad;
+                var IdAEditar, AidEncontrado, queVaAEditar, respuestaCampo, nuevoNombre, nuevonNumeroEst, nuevoAño, nuevoLugar, nuevaCiudad, nuevoRegistroStringificado;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0: return [4 /*yield*/, prompts({
@@ -175,6 +191,8 @@ function preguntarUsuario() {
                         case 13:
                             ;
                             console.log('El registro de tus mejores universidades:', bestUniverS5);
+                            nuevoRegistroStringificado = JSON.stringify(bestUniverS5);
+                            _03_escribir_archivo_1.escribirArchivo('./mejoresU.txt', nuevoRegistroStringificado);
                             preguntarUsuario().then().catch();
                             return [2 /*return*/, bestUniverS5];
                     }
@@ -183,7 +201,7 @@ function preguntarUsuario() {
         }
         function eliminarRegistro() {
             return __awaiter(this, void 0, void 0, function () {
-                var AidAEliminar, AidEncontrado;
+                var AidAEliminar, AidEncontrado, registroBorrado;
                 return __generator(this, function (_a) {
                     switch (_a.label) {
                         case 0: return [4 /*yield*/, prompts({
@@ -198,6 +216,8 @@ function preguntarUsuario() {
                             });
                             bestUniverS5.splice(AidEncontrado, 1);
                             console.log('La mejores son:', bestUniverS5);
+                            registroBorrado = JSON.stringify(bestUniverS5);
+                            _03_escribir_archivo_1.escribirArchivo('./mejoresU.txt', registroBorrado);
                             preguntarUsuario().then().catch();
                             return [2 /*return*/, bestUniverS5];
                     }
