@@ -1,4 +1,3 @@
-
 export function forEach(
     arreglo: any[],
     funcion: (

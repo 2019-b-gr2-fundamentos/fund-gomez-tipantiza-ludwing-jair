@@ -6,13 +6,12 @@ import { forEach } from "./07-forEach";
 import { reduce } from "./06-reduce";
 
 function main(){
-    const arregloEstudiantes = [
-        {id:1, nombre:"Adrian", nota: 2},
-        {id:2, nombre:"Vicente", nota: 5},
-        {id:3, nombre:"Wendy", nota: 7},
-        {id:4, nombre:"Carolina", nota: 8},
-        {id:5, nombre:"Carlos", nota: 9},
-    ];
+    const arregloEstudiantes =  [
+        {id:1, nombre:"Jair", nota: 7},
+        {id:2, nombre:"Ludwing", nota: 8},
+        {id:3, nombre:"Geneis", nota: 9},
+        {id:4, nombre:"Gabriela", nota: 5},
+        {id:5, nombre:"Eduardo", nota: 4},];
     // OPERADOR FOREACH
     // Enviamos -> NADA
     // Recibimos -> NADA
@@ -68,7 +67,7 @@ function main(){
     const respuestaSome = arregloEstudiantes
                 .some(
                     function(valorActual, i, arreglo){
-                        const condicion = valorActual.nota > 9;
+                        const condicion = valorActual.nota >=9;
                         // CONDICION TRUTY O TRUE
                         return condicion;
                     }
@@ -84,7 +83,7 @@ function main(){
     const respuestaEvery = arregloEstudiantes
                 .every(
                     function(valorActual){
-                        const condicion = valorActual.nota >= 4;
+                        const condicion = valorActual.nota <= 5;
                         return condicion;
                     }
                 );
@@ -106,25 +105,19 @@ function main(){
     console.log('Promedio:', respuestaReduce / arregloEstudiantes.length);
     console.log('arregloEstudiantes', arregloEstudiantes);
 
-    const respuestaFilterNuestro = filter(
-            arregloEstudiantes,
-            function(valorActual, i, arr){
-                console.log('Valor: ', valorActual);
-                console.log('Indice: ', i);
-                console.log('Arreglo: ', arr);
-                return valorActual.nota >= 7;
-            }
-        );
-    console.log('respuestaFilterNuestro:', respuestaFilterNuestro);
-    console.log('arregloEstudiantes: ', arregloEstudiantes);
 
-    const respuestaEveryNuestro = every(
+
+
+
+
+    //------------------------------------------------------------------mio............................//
+    const respuestaForEachNuestro = forEach(
         arregloEstudiantes,
         function(valorActual, i, arr){
-            return valorActual.nota >= 9;
+            console.log(valorActual.nota);
         }
     );
-    console.log('respuestaEveryNuestro:', respuestaEveryNuestro);
+    console.log('respuestaForEachNuestro:', respuestaForEachNuestro);
     console.log('arregloEstudiantes:', arregloEstudiantes);
 
     const respuestaMapNuestro = map(
@@ -138,26 +131,39 @@ function main(){
             };
         }
     );
-    console.log('respuestasMapNuestro:', respuestaMapNuestro);
+    
+    console.log('respuestas Map Casero:', respuestaMapNuestro);
     console.log('arregloEstudiantes:', arregloEstudiantes);
+
+    const respuestaFilterNuestro = filter(
+            arregloEstudiantes,
+            function(valorActual,i, arr){
+                return valorActual.nota >= 8;
+            }
+        );
+    console.log('respuesta Filter Casero:', respuestaFilterNuestro);
+    console.log('arregloEstudiantes: ', arregloEstudiantes);
+
 
     const respuestaSomeNuestro = some(
         arregloEstudiantes,
         function(valorActual, i, arr){
-            return valorActual.nota > 9;
+            return valorActual.nota >= 9;
         }
     );
-    console.log('respuestaSomeNuestro:', respuestaSomeNuestro);
+    console.log('respuesta Some Casero:', respuestaSomeNuestro);
     console.log('arregloEstudiantes:', arregloEstudiantes);
 
-    const respuestaForEachNuestro = forEach(
+
+    const respuestaEveryNuestro = every(
         arregloEstudiantes,
         function(valorActual, i, arr){
-            console.log(valorActual.nota);
+            return valorActual.nota <= 5;
         }
     );
-    console.log('respuestaForEachNuestro:', respuestaForEachNuestro);
+    console.log('respuesta Every Casero:', respuestaEveryNuestro);
     console.log('arregloEstudiantes:', arregloEstudiantes);
+
 
     const respuestaReduceNuestro = reduce(
         arregloEstudiantes,
@@ -165,7 +171,7 @@ function main(){
             return acumulador - valorActual.nota;
         }
     );
-    console.log('respuestaReduceNuestro:', respuestaReduceNuestro);
+    console.log('respuesta Reduce Casero:', respuestaReduceNuestro);
     console.log('Promedio:', respuestaReduceNuestro / arregloEstudiantes.length);
     console.log('arregloEstudiantes:', arregloEstudiantes);
 };

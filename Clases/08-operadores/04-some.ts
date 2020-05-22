@@ -1,5 +1,4 @@
-export function some(arreglo: any[],
-    funcion: (
+export function some(arreglo: any[], funcion: (
         valorActual:any, 
         indice?: number, 
         arreglo?: any[]) => boolean
